@@ -34,6 +34,11 @@ export const PaginationStyled = styled(Pagination)`
   margin-top: 25px;
   display: flex;
   justify-content: center;
+
+  button,
+  div {
+    color: #fff !important;
+  }
 `;
 
 export const TitleStyled = styled(Text)`

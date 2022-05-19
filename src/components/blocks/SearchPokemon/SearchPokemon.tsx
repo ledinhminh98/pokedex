@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import { Input } from 'components/elements';
 import { useDispatch } from 'react-redux';
 import { Creators as PokemonActions } from 'store/modules/pokemons/actions';
+import { Form } from './styles';
 
 const SearchPokemon: React.FC = () => {
   const dispatch = useDispatch();
@@ -56,7 +57,7 @@ const SearchPokemon: React.FC = () => {
         touched,
         submitForm,
       }) => (
-        <form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
           <Input
             type="text"
             name="search"
@@ -66,7 +67,7 @@ const SearchPokemon: React.FC = () => {
             touched={touched.search}
             errors={errors.search}
           />
-        </form>
+        </Form>
       )}
     </Formik>
   );

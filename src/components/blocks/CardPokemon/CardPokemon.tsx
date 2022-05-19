@@ -44,7 +44,7 @@ const CardPokemon: React.FC<ICardProps> = ({ data, loading }) => {
         {loading === 'loading' ? (
           <Skeleton animation="wave" variant="text" width={50} height={25} />
         ) : (
-          <NumberStyled># {data.id && padDigits(data.id)}</NumberStyled>
+          <NumberStyled>#{data.id && padDigits(data.id)}</NumberStyled>
         )}
 
         {loading === 'loading' ? (

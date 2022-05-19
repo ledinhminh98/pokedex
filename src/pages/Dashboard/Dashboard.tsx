@@ -1,20 +1,20 @@
-import React, { useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Creators as PokeActions } from 'store/modules/pokemons/actions';
-import { Creators as SharedActions } from 'store/modules/shared/actions';
-import { IState } from 'store/combineReducers';
-import { IPokeModel } from 'store/modules/pokemons/models';
-import { SearchPokemon, ModalDetailPokemon } from 'components/blocks';
-import { Modal } from 'components/elements';
+import { Grid } from '@material-ui/core';
+import { ModalDetailPokemon, SearchPokemon } from 'components/blocks';
 import CardPokemon from 'components/blocks/CardPokemon';
-import { Grid, Box } from '@material-ui/core';
+import { Modal } from 'components/elements';
+import React, { useCallback, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { IState } from 'store/combineReducers';
+import { Creators as PokeActions } from 'store/modules/pokemons/actions';
+import { IPokeModel } from 'store/modules/pokemons/models';
+import { Creators as SharedActions } from 'store/modules/shared/actions';
 import {
   Box as BoxStyled,
   Container,
   Header,
   PaginationStyled,
   TitleStyled,
-  WrapperBg,
+  WrapperBg
 } from './styles';
 
 const Dashboard: React.FC = () => {
