@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
 import { Formik } from 'formik';
-// import * as Yup from 'yup';
 import { Input } from 'components/elements';
 import { useDispatch } from 'react-redux';
 import { Creators as PokemonActions } from 'store/modules/pokemons/actions';
@@ -31,7 +30,6 @@ const SearchPokemon: React.FC = () => {
     (event, change, submit) => {
       change(event);
 
-      // debounce
       if (time) clearTimeout(time);
       setTime(setTimeout(() => submit(), 750));
     },
@@ -41,9 +39,6 @@ const SearchPokemon: React.FC = () => {
   return (
     <Formik
       initialValues={{ search: '' }}
-      // validationSchema={Yup.object({
-      //   search: Yup.string().required('requred field'),
-      // })}
       onSubmit={(values) => {
         if (!values.search) {
           getAllPokes(1);
