@@ -14,7 +14,7 @@ import {
   Header,
   PaginationStyled,
   TitleStyled,
-  WrapperBg
+  WrapperBg,
 } from './styles';
 
 const Dashboard: React.FC = () => {
@@ -85,9 +85,6 @@ const Dashboard: React.FC = () => {
           {notFoundItems && <h2>No Pokémon Matched Your Search!</h2>}
           {!isSearchFilled && (
             <PaginationStyled
-              showFirstButton
-              showLastButton
-              color={"primary"}
               count={Math.ceil(pagination / 20)}
               onChange={handlePagination}
               disabled={loading === 'loading'}

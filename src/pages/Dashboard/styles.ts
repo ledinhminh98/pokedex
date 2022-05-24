@@ -47,7 +47,7 @@ export const TitleStyled = styled(Text)`
 `;
 
 export const WrapperBg = styled.div`
-background: url(${WatermarkLarge}) right bottom -200px no-repeat;
-background-color: #2f2f2f;
-  height: 100vh;
+  background: url(${WatermarkLarge}) right bottom -200px no-repeat;
+  background-color: #2f2f2f;
+  min-height: 100vh;
 `;

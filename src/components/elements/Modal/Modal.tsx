@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Container, ModalStyled } from './styles';
 
 interface IModal {
