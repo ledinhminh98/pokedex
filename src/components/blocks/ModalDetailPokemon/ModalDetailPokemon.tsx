@@ -1,8 +1,8 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { IPokeModel, IPokeTypes } from 'store/modules/pokemons/models';
-import { IState } from 'store/combineReducers';
-import { formatTextToCapitalizeWithTrace, sumValues } from 'utils/tools';
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { IPokeModel, IPokeTypes } from 'store/modules/pokemons/models'
+import { IState } from 'store/combineReducers'
+import { formatTextToCapitalizeWithTrace, sumValues } from 'utils/tools'
 
 import {
   Container,
@@ -15,17 +15,17 @@ import {
   CustomSubTitle,
   Img,
   Relative,
-} from './styles';
+} from './styles'
 
 const ModalDetailPokemon: React.FC = () => {
   const detailPokemon = useSelector<IState, IPokeModel>(
     (state) => state.pokemons.currentPokemon,
-  );
+  )
 
   function getPrimaryColor(values: IPokeTypes[]): any {
-    const getPrimaryNameType = values.find((v) => v.slot === 1)?.type.name;
+    const getPrimaryNameType = values.find((v) => v.slot === 1)?.type.name
 
-    return getPrimaryNameType;
+    return getPrimaryNameType
   }
 
   return (
@@ -48,23 +48,25 @@ const ModalDetailPokemon: React.FC = () => {
           </Relative>
         </Left>
 
-        <Right item xs={6}>
-          <CustomSubTitle as="h3">Base Stats</CustomSubTitle>
-          <List>
-            {detailPokemon.stats.map((item) => (
-              <li>
-                {formatTextToCapitalizeWithTrace(item.stat.name)}{' '}
-                {item.base_stat}
-                <Bar size={item.base_stat} />
-              </li>
-            ))}
-          </List>
-          <strong>Total: </strong>
-          {sumValues(detailPokemon.stats.map((item) => item.base_stat))}
-        </Right>
+        {detailPokemon.stats && (
+          <Right item xs={6}>
+            <CustomSubTitle as="h3">Base Stats</CustomSubTitle>
+            <List>
+              {detailPokemon.stats.map((item) => (
+                <li>
+                  {formatTextToCapitalizeWithTrace(item.stat.name)}{' '}
+                  {item.base_stat}
+                  <Bar size={item.base_stat} />
+                </li>
+              ))}
+            </List>
+            <strong>Total: </strong>
+            {sumValues(detailPokemon.stats.map((item) => item.base_stat))}
+          </Right>
+        )}
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default ModalDetailPokemon;
+export default ModalDetailPokemon
