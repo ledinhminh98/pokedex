@@ -3,8 +3,8 @@ export enum SharedActionTypes {
 }
 
 interface IHandleModal {
-  type: SharedActionTypes.HANDLE_MODAL;
-  payload: boolean;
+  type: SharedActionTypes.HANDLE_MODAL
+  payload: boolean
 }
 
 export const Creators = {
@@ -12,8 +12,8 @@ export const Creators = {
     return {
       type: SharedActionTypes.HANDLE_MODAL,
       payload: value,
-    };
+    }
   },
-};
+}
 
-export type ISharedAction = IHandleModal;
+export type ISharedAction = IHandleModal

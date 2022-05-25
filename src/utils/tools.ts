@@ -1,4 +1,4 @@
-import { uuid } from 'uuidv4';
+import { uuid } from 'uuidv4'
 
 export function mockListPokemons() {
   return Array.from({ length: 20 }, () => ({
@@ -9,7 +9,7 @@ export function mockListPokemons() {
     types: [],
     stats: [],
     abilities: [],
-  }));
+  }))
 }
 
 export function formatTextToCapitalize(value: string) {
@@ -17,9 +17,9 @@ export function formatTextToCapitalize(value: string) {
     .toLocaleLowerCase()
     .split(' ')
     .map((l) => l.charAt(0).toUpperCase() + l.substring(1))
-    .join(' ');
+    .join(' ')
 
-  return text;
+  return text
 }
 
 export function formatTextToCapitalizeWithTrace(value: string) {
@@ -27,21 +27,21 @@ export function formatTextToCapitalizeWithTrace(value: string) {
     .toLocaleLowerCase()
     .split('-')
     .map((l) => l.charAt(0).toUpperCase() + l.substring(1))
-    .join(' ');
+    .join(' ')
 
-  return text;
+  return text
 }
 
 export function padDigits(number: number | string) {
   if (Number(number) <= 99) {
-    number = `00${number}`.slice(-3);
+    number = `00${number}`.slice(-3)
   }
-  return number;
+  return number
 }
 
 export function sumValues(val: number[]) {
   const sumItems = val.reduce((acc, curr) => {
-    return acc + curr;
-  }, 0);
-  return sumItems;
+    return acc + curr
+  }, 0)
+  return sumItems
 }
