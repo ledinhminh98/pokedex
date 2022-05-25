@@ -1,27 +1,27 @@
-import styled, { css } from 'styled-components';
-import { Text } from 'components/elements';
-import { Grid } from '@material-ui/core';
-import WatermarkLarge from 'assets/img/watermark-pokeball-large.svg';
-import { bgType as bg, IWrapperProps } from '../CardPokemon/styles';
-import { bgType } from '../TypesPokemon/styles';
+import styled, { css } from 'styled-components'
+import { Text } from 'components/elements'
+import { Grid } from '@material-ui/core'
+import WatermarkLarge from 'assets/img/watermark-pokeball-large.svg'
+import { bgType as bg, IWrapperProps } from '../CardPokemon/styles'
+import { bgType } from '../TypesPokemon/styles'
 
 interface ILeftProps {
-  color?: IWrapperProps['color'];
+  color?: IWrapperProps['color']
 }
 interface ITitleProps {
-  white?: boolean;
+  white?: boolean
 }
 
 interface IAbilityProps {
-  color?: IWrapperProps['color'];
+  color?: IWrapperProps['color']
 }
 
 export const Container = styled(Grid)`
   height: 100%;
-`;
+`
 
 interface IBarProps {
-  size: number;
+  size: number
 }
 
 export const List = styled.ul`
@@ -30,7 +30,7 @@ export const List = styled.ul`
   li {
     padding: 10px 0;
   }
-`;
+`
 
 export const Bar = styled.div<IBarProps>`
   height: 4px;
@@ -46,13 +46,13 @@ export const Bar = styled.div<IBarProps>`
     content: '';
     border-radius: 15px;
   }
-`;
+`
 
 export const CustomTitle = styled(Text)`
   color: ${(props) => props.theme.palette.common.white};
   font-size: 32px;
   text-transform: capitalize;
-`;
+`
 
 export const CustomSubTitle = styled(Text)<ITitleProps>`
   color: ${(props) => props.theme.palette.success.main};
@@ -63,7 +63,7 @@ export const CustomSubTitle = styled(Text)<ITitleProps>`
     css`
       color: ${props.theme.palette.common.white};
     `}
-`;
+`
 
 export const Left = styled(Grid)<ILeftProps>`
   ${(props) => bg[props.color || 'default']}
@@ -85,15 +85,15 @@ export const Left = styled(Grid)<ILeftProps>`
     top: 0;
     opacity: 0.1;
   }
-`;
+`
 
 export const Relative = styled.div`
   position: relative;
-`;
+`
 
 export const Right = styled(Grid)`
   padding: 50px 35px;
-`;
+`
 
 export const ListAbilities = styled.ul<IAbilityProps>`
   margin-top: 25px;
@@ -108,9 +108,9 @@ export const ListAbilities = styled.ul<IAbilityProps>`
     border-radius: 5px;
     text-align: center;
   }
-`;
+`
 
 export const Img = styled.img`
   margin-bottom: 35px;
   margin-top: 15px;
-`;
+`

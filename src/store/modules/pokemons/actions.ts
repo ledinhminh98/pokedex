@@ -1,4 +1,4 @@
-import { IPokeModel } from './models';
+import { IPokeModel } from './models'
 
 export enum PokeActionTypes {
   GET_POKE = 'pokemon/GET_POKE',
@@ -13,40 +13,40 @@ export enum PokeActionTypes {
 }
 
 interface IGetPoke {
-  type: PokeActionTypes.GET_POKE;
-  payload: number;
+  type: PokeActionTypes.GET_POKE
+  payload: number
 }
 
 interface IGetPokeSuccess {
-  type: PokeActionTypes.GET_POKE_SUCCESS;
+  type: PokeActionTypes.GET_POKE_SUCCESS
   payload: {
-    data: IPokeModel[];
-    pagination: number;
-  };
+    data: IPokeModel[]
+    pagination: number
+  }
 }
 
 interface IGetPokeFailure {
-  type: PokeActionTypes.GET_POKE_FAILURE;
+  type: PokeActionTypes.GET_POKE_FAILURE
 }
 
 interface ISearchPoke {
-  type: PokeActionTypes.SEARCH_POKE;
-  payload: string;
+  type: PokeActionTypes.SEARCH_POKE
+  payload: string
 }
 
 interface ISearchPokeSuccess {
-  type: PokeActionTypes.SEARCH_POKE_SUCCESS;
-  payload: IPokeModel;
+  type: PokeActionTypes.SEARCH_POKE_SUCCESS
+  payload: IPokeModel
 }
 interface ISearchPokeFailure {
-  type: PokeActionTypes.SEARCH_POKE_FAILURE;
+  type: PokeActionTypes.SEARCH_POKE_FAILURE
 }
 
 interface IGetPokeInf {
-  type: PokeActionTypes.GET_POKE_INF;
+  type: PokeActionTypes.GET_POKE_INF
   payload: {
-    id: number | string;
-  };
+    id: number | string
+  }
 }
 
 export const Creators = {
@@ -54,44 +54,44 @@ export const Creators = {
     return {
       type: PokeActionTypes.GET_POKE,
       payload: value,
-    };
+    }
   },
   getPokesSuccess(data: IPokeModel[], pagination: number): IGetPokeSuccess {
     return {
       type: PokeActionTypes.GET_POKE_SUCCESS,
       payload: { data, pagination },
-    };
+    }
   },
   getPokesFailure(): IGetPokeFailure {
     return {
       type: PokeActionTypes.GET_POKE_FAILURE,
-    };
+    }
   },
 
   searchPoke(data: string): ISearchPoke {
     return {
       type: PokeActionTypes.SEARCH_POKE,
       payload: data,
-    };
+    }
   },
   searchPokeSuccess(data: IPokeModel): ISearchPokeSuccess {
     return {
       type: PokeActionTypes.SEARCH_POKE_SUCCESS,
       payload: data,
-    };
+    }
   },
   searchPokeFailure(): ISearchPokeFailure {
     return {
       type: PokeActionTypes.SEARCH_POKE_FAILURE,
-    };
+    }
   },
   getInfPoke(id: number | string): IGetPokeInf {
     return {
       type: PokeActionTypes.GET_POKE_INF,
       payload: { id },
-    };
+    }
   },
-};
+}
 
 export type IPokeAction =
   | IGetPoke
@@ -100,4 +100,4 @@ export type IPokeAction =
   | ISearchPokeSuccess
   | ISearchPoke
   | ISearchPokeFailure
-  | IGetPokeInf;
+  | IGetPokeInf
