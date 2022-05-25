@@ -1,13 +1,13 @@
-import { Grid } from '@material-ui/core';
-import { ModalDetailPokemon, SearchPokemon } from 'components/blocks';
-import CardPokemon from 'components/blocks/CardPokemon';
-import { Modal } from 'components/elements';
-import React, { useCallback, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { IState } from 'store/combineReducers';
-import { Creators as PokeActions } from 'store/modules/pokemons/actions';
-import { IPokeModel } from 'store/modules/pokemons/models';
-import { Creators as SharedActions } from 'store/modules/shared/actions';
+import { Grid } from '@material-ui/core'
+import { ModalDetailPokemon, SearchPokemon } from 'components/blocks'
+import CardPokemon from 'components/blocks/CardPokemon'
+import { Modal } from 'components/elements'
+import React, { useCallback, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { IState } from 'store/combineReducers'
+import { Creators as PokeActions } from 'store/modules/pokemons/actions'
+import { IPokeModel } from 'store/modules/pokemons/models'
+import { Creators as SharedActions } from 'store/modules/shared/actions'
 import {
   Box as BoxStyled,
   Container,
@@ -15,53 +15,53 @@ import {
   PaginationStyled,
   TitleStyled,
   WrapperBg,
-} from './styles';
+} from './styles'
 
 const Dashboard: React.FC = () => {
   const pokes = useSelector<IState, IPokeModel[]>(
     (state) => state.pokemons.pokes,
-  );
+  )
 
   const statusModal = useSelector<IState, boolean>(
     (state) => state.shared.modal,
-  );
+  )
   const pagination = useSelector<IState, number>(
     (state) => state.pokemons.pages,
-  );
+  )
 
   const loading = useSelector<IState, string>(
     (state) => state.pokemons.loadingStatus,
-  );
+  )
 
   const isSearchFilled = useSelector<IState, boolean>(
     (state) => state.pokemons.isSearchFilled,
-  );
+  )
 
   const notFoundItems = useSelector<IState, string>(
     (state) => state.pokemons.error,
-  );
+  )
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   const actionGetPokes = useCallback(() => {
-    dispatch(PokeActions.getPokes(1));
-  }, [dispatch]);
+    dispatch(PokeActions.getPokes(1))
+  }, [dispatch])
 
   useEffect(() => {
-    actionGetPokes();
-  }, [actionGetPokes]);
+    actionGetPokes()
+  }, [actionGetPokes])
 
   const handlePagination = (
     event: React.ChangeEvent<unknown>,
     value: number,
   ) => {
-    dispatch(PokeActions.getPokes(value));
-  };
+    dispatch(PokeActions.getPokes(value))
+  }
 
   const handleCloseModal = useCallback(() => {
-    dispatch(PokeActions.getInfPoke('CLEAR'));
-    dispatch(SharedActions.handleModal(false));
-  }, [dispatch]);
+    dispatch(PokeActions.getInfPoke('CLEAR'))
+    dispatch(SharedActions.handleModal(false))
+  }, [dispatch])
 
   return (
     <>
@@ -96,7 +96,7 @@ const Dashboard: React.FC = () => {
         <ModalDetailPokemon />
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard
