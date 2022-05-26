@@ -1,20 +1,19 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { IPokeModel, IPokeTypes } from 'store/modules/pokemons/models'
 import { IState } from 'store/combineReducers'
+import { IPokeModel, IPokeTypes } from 'store/modules/pokemons/models'
 import { formatTextToCapitalizeWithTrace, sumValues } from 'utils/tools'
-
 import {
+  Bar,
   Container,
+  CustomSubTitle,
+  CustomTitle,
+  Img,
+  Left,
   List,
   ListAbilities,
-  Bar,
-  CustomTitle,
-  Left,
-  Right,
-  CustomSubTitle,
-  Img,
   Relative,
+  Right,
 } from './styles'
 
 const ModalDetailPokemon: React.FC = () => {
@@ -34,9 +33,7 @@ const ModalDetailPokemon: React.FC = () => {
         <Left item xs={6} color={getPrimaryColor(detailPokemon.types)}>
           <Relative>
             <CustomTitle as="h2">{detailPokemon.name}</CustomTitle>
-
             <Img src={detailPokemon.img} alt={detailPokemon.name} />
-
             <CustomSubTitle white as="h3">
               Abilities
             </CustomSubTitle>

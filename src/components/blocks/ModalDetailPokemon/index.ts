@@ -1,1 +1,1 @@
-export { default } from './ModalDetailPokemon';
+export { default } from './ModalDetailPokemon'

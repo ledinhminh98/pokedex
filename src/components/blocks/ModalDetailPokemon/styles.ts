@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import { Text } from 'components/elements'
 import { Grid } from '@material-ui/core'
 import WatermarkLarge from 'assets/img/watermark-pokeball-large.svg'
@@ -24,6 +24,15 @@ interface IBarProps {
   size: number
 }
 
+const widthExpand = (size: any) => keyframes`
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: ${size / 1.5}%;
+  }
+`
+
 export const List = styled.ul`
   margin-top: 35px;
   margin-bottom: 15px;
@@ -33,18 +42,19 @@ export const List = styled.ul`
 `
 
 export const Bar = styled.div<IBarProps>`
-  height: 4px;
+  width: 100%;
+  height: 6px;
+  margin-top: 5px;
   background: ${(props) => props.theme.palette.grey[100]};
-  width: 150px;
   position: relative;
   border-radius: 15px;
   &:after {
-    width: ${(props) => props.size / 1.5}%;
     height: 100%;
     position: absolute;
     background: ${(props) => props.theme.palette.success.main};
     content: '';
     border-radius: 15px;
+    animation: ${(props) => widthExpand(props.size)} 0.5s forwards 0.5s;
   }
 `
 
@@ -52,6 +62,7 @@ export const CustomTitle = styled(Text)`
   color: ${(props) => props.theme.palette.common.white};
   font-size: 32px;
   text-transform: capitalize;
+  word-break: break-all;
 `
 
 export const CustomSubTitle = styled(Text)<ITitleProps>`
@@ -67,7 +78,7 @@ export const CustomSubTitle = styled(Text)<ITitleProps>`
 
 export const Left = styled(Grid)<ILeftProps>`
   ${(props) => bg[props.color || 'default']}
-  padding:50px 35px;
+  padding: 50px 35px;
   text-align: center;
   position: relative;
 
@@ -93,6 +104,9 @@ export const Relative = styled.div`
 
 export const Right = styled(Grid)`
   padding: 50px 35px;
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
 `
 
 export const ListAbilities = styled.ul<IAbilityProps>`
