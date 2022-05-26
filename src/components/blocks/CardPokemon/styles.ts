@@ -110,12 +110,8 @@ export const Wrapper = styled.div<IWrapperProps>`
   ${(props) => bgType[props.color || 'default']}
   cursor:pointer;
 
-  &:hover {
-    opacity: 0.8;
-
-    img {
-      animation: ${bounce} 1.5s ease-out infinite;
-    }
+  &:hover img {
+    animation: ${bounce} 1.5s ease-out infinite;
   }
 `
 
