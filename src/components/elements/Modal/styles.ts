@@ -14,7 +14,7 @@ export const Container = styled.div`
   background: #fff;
   max-width: 600px;
   width: 100%;
-  height: 500px;
+  height: fit-content;
   border-radius: 35px;
   border: 5px solid white;
   overflow: hidden;

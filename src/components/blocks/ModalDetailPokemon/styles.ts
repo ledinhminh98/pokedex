@@ -34,8 +34,8 @@ const widthExpand = (size: number) => keyframes`
 `
 
 export const List = styled.ul`
-  margin-top: 35px;
-  margin-bottom: 15px;
+  margin: 15px 0;
+
   li {
     padding: 10px 0;
   }
@@ -63,6 +63,9 @@ export const CustomTitle = styled(Text)`
   font-size: 32px;
   text-transform: capitalize;
   word-break: break-all;
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `
 
 export const CustomSubTitle = styled(Text)<ITitleProps>`
@@ -81,6 +84,9 @@ export const Left = styled(Grid)<ILeftProps>`
   padding: 50px 35px;
   text-align: center;
   position: relative;
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
 
   &:before {
     position: absolute;
@@ -90,11 +96,15 @@ export const Left = styled(Grid)<ILeftProps>`
     height: 100%;
     background-image: url(${WatermarkLarge});
     background-repeat: no-repeat;
-    background-position: top 106px center;
-    background-size: 100px;
+    background-position: top 50px center;
+    background-size: 200px;
     left: 0;
     top: 0;
     opacity: 0.1;
+    @media (max-width: 768px) {
+      background-position: top 80px center;
+      background-size: 150px;
+    }
   }
 `
 

@@ -44,6 +44,10 @@ export const PaginationStyled = styled(Pagination)`
 export const TitleStyled = styled(Text)`
   font-size: 42px;
   color: #ffcc02;
+  @media (max-width: 768px) {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
 `
 
 export const WrapperBg = styled.div`
