@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components'
 import Modal from '@material-ui/core/Modal'
+import styled, { keyframes } from 'styled-components'
 
 const zoomIn = keyframes`
   from {

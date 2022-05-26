@@ -1,6 +1,6 @@
-import React, { useCallback, useState } from 'react'
-import { Formik } from 'formik'
 import { Input } from 'components/elements'
+import { Formik } from 'formik'
+import React, { useCallback, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Creators as PokemonActions } from 'store/modules/pokemons/actions'
 import { Form } from './styles'

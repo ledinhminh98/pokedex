@@ -1,9 +1,9 @@
-import { takeLatest, put } from 'redux-saga/effects'
-import { runSaga } from 'redux-saga'
 import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
+import { runSaga } from 'redux-saga'
+import { takeLatest } from 'redux-saga/effects'
 import api from 'services/api'
-import { PokeActionTypes, Creators as PokemonsActions } from '../actions'
+import { Creators as PokemonsActions, PokeActionTypes } from '../actions'
 import saga, { getPokes, searchPokes } from '../saga'
 
 const gen = saga()

@@ -1,10 +1,10 @@
-import React from 'react';
-import { TypographyProps } from '@material-ui/core/Typography';
-import { TextStyled } from './styles';
+import { TypographyProps } from '@material-ui/core/Typography'
+import React from 'react'
+import { TextStyled } from './styles'
 
 interface ITextProps extends TypographyProps {
-  children: React.ReactNode;
-  size: TypographyProps['variant'];
+  children: React.ReactNode
+  size: TypographyProps['variant']
 }
 
 const Text: React.FC<ITextProps> = ({ children, variant, size, className }) => {
@@ -12,7 +12,7 @@ const Text: React.FC<ITextProps> = ({ children, variant, size, className }) => {
     <TextStyled className={className} variant={variant} size={size}>
       {children}
     </TextStyled>
-  );
-};
+  )
+}
 
-export default Text;
+export default Text

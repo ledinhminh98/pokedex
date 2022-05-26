@@ -1,8 +1,8 @@
-import styled from 'styled-components'
-import { Pagination } from '@material-ui/lab'
-import { Text } from 'components/elements'
 import { Grid } from '@material-ui/core'
+import { Pagination } from '@material-ui/lab'
 import WatermarkLarge from 'assets/img/watermark-pokeball-large.svg'
+import { Text } from 'components/elements'
+import styled from 'styled-components'
 
 export const Box = styled.div`
   display: grid;

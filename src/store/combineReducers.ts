@@ -1,12 +1,11 @@
 import { combineReducers } from 'redux'
 import pokemonsReducer, {
-  IPokemonState,
   INITIAL_STATE_POKE,
+  IPokemonState,
 } from './modules/pokemons/reducer'
-
 import sharedReducer, {
-  ISharedState,
   INITIAL_STATE_SHARED,
+  ISharedState,
 } from './modules/shared/reducer'
 
 export interface IState {

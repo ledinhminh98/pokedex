@@ -1,15 +1,14 @@
-import React, { InputHTMLAttributes } from 'react';
-
-import InputAdornment from '@material-ui/core/InputAdornment';
-import { Search as SearchIcon, Error as ErrorIcon } from '@material-ui/icons';
-import { TextField, Tooltip } from '@material-ui/core';
-import { Box, ErrorBadge, IconButtonStyled } from './styles';
+import { TextField, Tooltip } from '@material-ui/core'
+import InputAdornment from '@material-ui/core/InputAdornment'
+import { Error as ErrorIcon, Search as SearchIcon } from '@material-ui/icons'
+import React, { InputHTMLAttributes } from 'react'
+import { Box, ErrorBadge, IconButtonStyled } from './styles'
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  className?: string;
-  errors?: string | undefined;
-  touched?: boolean;
-  label?: string;
+  className?: string
+  errors?: string | undefined
+  touched?: boolean
+  label?: string
 }
 
 const Input: React.FC<IInputProps> = ({
@@ -26,7 +25,7 @@ const Input: React.FC<IInputProps> = ({
 }) => {
   function isErrorIcon() {
     if (!errors) {
-      return false;
+      return false
     }
     return (
       <Tooltip title={errors || ''}>
@@ -36,7 +35,7 @@ const Input: React.FC<IInputProps> = ({
           </ErrorBadge>
         </IconButtonStyled>
       </Tooltip>
-    );
+    )
   }
 
   return (
@@ -63,7 +62,7 @@ const Input: React.FC<IInputProps> = ({
         }}
       />
     </Box>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

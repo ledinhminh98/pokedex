@@ -1,5 +1,5 @@
-import sharedReducer, { INITIAL_STATE_SHARED } from '../reducer'
 import { Creators as SharedActions } from '../actions'
+import sharedReducer, { INITIAL_STATE_SHARED } from '../reducer'
 
 describe('Reucer Shared', () => {
   it('HANDLE MODAL', () => {

@@ -1,13 +1,13 @@
+import {
+  StylesProvider,
+  ThemeProvider as MuiThemeProvider,
+} from '@material-ui/styles'
 import React from 'react'
+import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import Routes from 'routes'
-import {
-  ThemeProvider as MuiThemeProvider,
-  StylesProvider,
-} from '@material-ui/styles'
-import { ThemeProvider } from 'styled-components'
 import store from 'store'
-import { Provider } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
 import GlobalStyle from './styles/global'
 import theme from './styles/theme'
 

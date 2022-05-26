@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components';
-import Typography, { TypographyProps } from '@material-ui/core/Typography';
+import Typography, { TypographyProps } from '@material-ui/core/Typography'
+import styled, { css } from 'styled-components'
 
 interface ITextStyled {
-  size: TypographyProps['variant'];
+  size: TypographyProps['variant']
 }
 
 export const TextStyled = styled(Typography)<ITextStyled>`
@@ -28,4 +28,4 @@ export const TextStyled = styled(Typography)<ITextStyled>`
     css`
       font-size: 22px;
     `}
-`;
+`

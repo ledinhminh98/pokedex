@@ -1,5 +1,5 @@
 import produce from 'immer'
-import { SharedActionTypes, ISharedAction } from './actions'
+import { ISharedAction, SharedActionTypes } from './actions'
 
 export interface ISharedState {
   modal: boolean

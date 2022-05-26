@@ -1,6 +1,6 @@
-import pokemonsReducer, { INITIAL_STATE_POKE } from '../reducer'
 import { Creators as PokeActions } from '../actions'
 import { ApiStatus } from '../models'
+import pokemonsReducer, { INITIAL_STATE_POKE } from '../reducer'
 
 describe('Reducer Pokemon', () => {
   it('GET_POKE', () => {

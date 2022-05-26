@@ -13,7 +13,7 @@ import {
   List,
   ListAbilities,
   Relative,
-  Right,
+  Right
 } from './styles'
 
 const ModalDetailPokemon: React.FC = () => {

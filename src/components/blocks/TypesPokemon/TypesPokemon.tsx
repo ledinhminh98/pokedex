@@ -1,7 +1,7 @@
+import Skeleton from '@material-ui/lab/Skeleton'
 import React from 'react'
 import { IPokeTypes } from 'store/modules/pokemons/models'
-import Skeleton from '@material-ui/lab/Skeleton'
-import { Label, Box } from './styles'
+import { Box, Label } from './styles'
 
 interface ITypesProps {
   data: IPokeTypes[]

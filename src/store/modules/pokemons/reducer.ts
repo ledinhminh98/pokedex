@@ -1,7 +1,7 @@
 import produce from 'immer'
 import { mockListPokemons } from 'utils/tools'
-import { ApiStatus, IPokeModel, IPokeStats, IPokeAbilities } from './models'
 import { IPokeAction, PokeActionTypes } from './actions'
+import { ApiStatus, IPokeAbilities, IPokeModel, IPokeStats } from './models'
 
 export interface IPokemonState {
   loadingStatus: ApiStatus

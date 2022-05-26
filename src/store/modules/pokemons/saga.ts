@@ -1,7 +1,5 @@
-import { call, takeLatest, put, all, delay } from 'redux-saga/effects'
-
+import { all, call, delay, put, takeLatest } from 'redux-saga/effects'
 import api from '../../../services/api'
-
 import { PokeActionTypes } from './actions'
 import { IPokeModel } from './models'
 
