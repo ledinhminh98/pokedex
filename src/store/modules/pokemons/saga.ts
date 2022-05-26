@@ -48,7 +48,7 @@ export function* searchPokes(action: any) {
         name: data.name,
         img: data.sprites.front_default,
         types: data.types,
-        stats: data.data,
+        stats: data.stats,
         abilities: data.abilities,
       },
     })

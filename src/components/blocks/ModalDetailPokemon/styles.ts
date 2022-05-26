@@ -24,7 +24,7 @@ interface IBarProps {
   size: number
 }
 
-const widthExpand = (size: any) => keyframes`
+const widthExpand = (size: number) => keyframes`
   0% {
     width: 0px;
   }
