@@ -1,17 +1,17 @@
-import React from 'react';
-import { Container, ModalStyled } from './styles';
+import React from 'react'
+import { Container, ModalStyled } from './styles'
 
 interface IModal {
-  open: boolean;
-  handleClose: (details: boolean) => void;
+  open: boolean
+  handleClose: (details: boolean) => void
 }
 
 const Modal: React.FC<IModal> = ({ open, children, handleClose }) => {
   return (
     <ModalStyled open={open} onClose={handleClose}>
-      <Container>{children}</Container>
+      <Container className={`${open ? 'open' : ''}`}>{children}</Container>
     </ModalStyled>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

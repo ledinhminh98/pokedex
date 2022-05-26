@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components';
-import { IPokeTypes } from 'store/modules/pokemons/models';
-import { darken } from 'polished';
+import styled, { css } from 'styled-components'
+import { IPokeTypes } from 'store/modules/pokemons/models'
+import { darken } from 'polished'
 
 export interface ILabelProps {
-  color?: IPokeTypes['type']['name'];
+  color?: IPokeTypes['type']['name']
 }
 
 export const bgType = {
@@ -61,7 +61,7 @@ export const bgType = {
   default: css`
     background: ${darken(0.2, '#fafafa')};
   `,
-};
+}
 
 export const Label = styled.span<ILabelProps>`
   font-size: 14px;
@@ -75,7 +75,7 @@ export const Label = styled.span<ILabelProps>`
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
   min-width: 45px;
   text-align: center;
-`;
+`
 
 export const Box = styled.div`
   display: inline-grid;
@@ -83,4 +83,4 @@ export const Box = styled.div`
   grid-area: auto;
   grid-auto-flow: column;
   margin-top: 10px;
-`;
+`

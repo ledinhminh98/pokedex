@@ -1,11 +1,11 @@
-import React from 'react';
-import { IPokeTypes } from 'store/modules/pokemons/models';
-import Skeleton from '@material-ui/lab/Skeleton';
-import { Label, Box } from './styles';
+import React from 'react'
+import { IPokeTypes } from 'store/modules/pokemons/models'
+import Skeleton from '@material-ui/lab/Skeleton'
+import { Label, Box } from './styles'
 
 interface ITypesProps {
-  data: IPokeTypes[];
-  loading?: string;
+  data: IPokeTypes[]
+  loading?: string
 }
 
 const TypesPokemon: React.FC<ITypesProps> = ({ data, loading }) => {
@@ -24,10 +24,10 @@ const TypesPokemon: React.FC<ITypesProps> = ({ data, loading }) => {
           <Label key={item.type.name} color={item.type.name}>
             {item.type.name}
           </Label>
-        );
+        )
       })}
     </Box>
-  );
-};
+  )
+}
 
-export default TypesPokemon;
+export default TypesPokemon

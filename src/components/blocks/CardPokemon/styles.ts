@@ -1,7 +1,28 @@
-import styled, { css } from 'styled-components';
-import waterMarkPokeball from 'assets/img/watermark-pokeball.svg';
-import { Text } from 'components/elements';
+import styled, { css, keyframes } from 'styled-components'
+import waterMarkPokeball from 'assets/img/watermark-pokeball.svg'
+import { Text } from 'components/elements'
 
+const bounce = keyframes`
+  0% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+`
 export interface IWrapperProps {
   color?:
     | 'grass'
@@ -15,8 +36,8 @@ export interface IWrapperProps {
     | 'fairy'
     | 'fighting'
     | 'flying'
-    | 'rock';
-  loading: string;
+    | 'rock'
+  loading: string
 }
 
 export const bgType = {
@@ -74,7 +95,7 @@ export const bgType = {
   default: css`
     background-color: #fafafa;
   `,
-};
+}
 
 export const Wrapper = styled.div<IWrapperProps>`
   border-radius: 15px;
@@ -91,8 +112,12 @@ export const Wrapper = styled.div<IWrapperProps>`
 
   &:hover {
     opacity: 0.8;
+
+    img {
+      animation: ${bounce} 1.5s ease-out infinite;
+    }
   }
-`;
+`
 
 export const Title = styled(Text)`
   font-size: 30px;
@@ -104,8 +129,9 @@ export const Title = styled(Text)`
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 180px;
-`;
+`
+
 export const NumberStyled = styled.span`
   color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
-`;
+`
