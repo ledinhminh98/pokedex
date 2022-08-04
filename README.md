@@ -1,39 +1,17 @@
 
-<br/>
-<h1 align="center"> Pokédex </h1>
+# Pokédex
+![screenshot](https://user-images.githubusercontent.com/71751434/182751692-7c23fd3d-6fae-4cec-bb93-1cc0b1a5c8af.png)
 
-## :rocket: Technologies used
-- [React]
-- [Redux]
-- [Formik]
-- [Axios]
-- [Typescript]
-- [Styled Components]
-- [Immer]
 
-<hr/>
+## Installation
 
-## Install dependencies
-
-To install the project's dependencies, run the command
-
-```
+``` bash
+# To install the project's dependencies, run the command
 npm install or yarn install
-```
 
+# To run the project in the development environment, run the command
+npm run dev
 
-## Execute Project
-
-To run the project in the development environment, run the command
-
-```
-npm start or yarn start
-```
-
-## Run Test
-
-To run the tests in the development environment, run the command
-
-```
+# To run the tests in the development environment, run the command
 npm test or yarn test
 ```
